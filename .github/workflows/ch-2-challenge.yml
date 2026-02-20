@@ -5,24 +5,18 @@ jobs:
         name: Ubuntu job
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@v2
             - name: Print Date
               run: echo "$(date)"
     job2:
         name: Windows job
         runs-on: windows-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@v2
             - name: Print Date
               run: echo "$(date)"
     job3:
         name: MacOS job
         runs-on: macos-latest
         steps:
-            - name: Checkout
-              uses: actions/checkout@v2
             - name: Print Date
               run: echo "$(date)"
     job4:
@@ -30,8 +24,6 @@ jobs:
         runs-on: macos-latest
         needs: [job1,job2,job3]
         steps:
-            - name: Checkout
-              uses: actions/checkout@v2
             - name: Print Date
               run: echo "$(date)"
 
