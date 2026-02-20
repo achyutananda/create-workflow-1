@@ -2,7 +2,7 @@ name: myOwnCI
 on: push
 jobs:
     job1:
-        name: First job
+        name: Ubuntu job
         runs-on: ubuntu-latest
         steps:
         - name: Step one
@@ -12,6 +12,7 @@ jobs:
     job2:
         name: Windows job
         runs-on: windows-latest
+        needs: [job1]
         steps:
         - name: Step one
           uses: actions/checkout@v2
@@ -20,6 +21,7 @@ jobs:
     job3:
         name: Macos job
         runs-on: macos-latest
+        needs: [job1,job2]
         steps:
         - name: Step one
           uses: actions/checkout@v2
