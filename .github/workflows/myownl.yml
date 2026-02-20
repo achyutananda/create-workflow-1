@@ -1,5 +1,16 @@
 name: myOwnCI
-on: push
+on: 
+    push:
+        branches:
+          - 'main'
+          - 'release/*'
+        # branches-ignore:
+        #   - 'release/old-*'
+        tags:
+            - 'v1.*'
+        # tags-ignore:
+        #     - 'v2.*'
+
 jobs:
     job1:
         name: Ubuntu job
