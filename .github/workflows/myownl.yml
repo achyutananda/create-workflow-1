@@ -24,4 +24,4 @@ jobs:
         - name: Step one
           uses: actions/checkout@v2
         - name: Step two
-          run: echo "Hello from macos runner
+          run: echo "Hello from macos runner"
