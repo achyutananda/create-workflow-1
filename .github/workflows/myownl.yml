@@ -1,13 +1,14 @@
 name: myOwnCI
 on: 
-    push:
+      pull_request:
+    # push:
         branches:
           - 'main'
           - 'release/*'
         # branches-ignore:
         #   - 'release/old-*'
-        tags:
-            - 'v1.*'
+        # tags:
+        #     - 'v1.*'
         # tags-ignore:
         #     - 'v2.*'
 
